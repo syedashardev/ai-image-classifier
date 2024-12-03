@@ -2,22 +2,21 @@
 /**
  * Plugin Name: AI Image Classifier Plugin
  * Description: This task is for Learning of Plugin development.
- * Version: 1.10.3
  * @link https://github.com/syedashardev/ai-image-classifier/issues/3
- * @since X.X.X
- * @return
+ * @since 12.02.2024
  */
 
-// Calling Action Hook to add menu
- add_action("admin_menu", "cp_add_admin_menu");
+
 
  // Add Menu
- function cp_add_admin_menu(){
-    add_menu_page("AI Image Classifier", "Image Classifier", "manage_options", "ai-plugin", "cp_handle_admin_menu", "dashicons-cover-image", 23)
+ function add_admin_menu(){
+    add_menu_page("AI Image Classifier", "Image Classifier", "manage_options", "ai-plugin", "admin_menu-content", "dashicons-cover-image", 23)
  }
+// Calling Action Hook to add menu
+add_action("admin_menu", "add_admin_menu");
 
  // Menu Handle callback
- function cp_handle_admin_menu(){
+ function admin_menu-content(){
      echo "<h2>Aslam-O-Aliakum Pakistan</h2>"
  }
 ?>
